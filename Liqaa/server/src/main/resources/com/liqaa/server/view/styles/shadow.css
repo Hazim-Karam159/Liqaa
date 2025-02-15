@@ -1,0 +1,12 @@
+.pane-shadow {/*
+    background-color: #ffffff; /* Background color */
+  /*  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    transform: translateY(10px);
+    transition: all 0.3s ease-in-out;
+    */
+}
+
+.pane-shadow:hover {
+   /* transform: translateY(0);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);*/
+}

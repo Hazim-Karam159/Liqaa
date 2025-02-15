@@ -1,0 +1,7 @@
+/* button-style.css */
+
+.button {
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-cursor: hand; /* change cursor to hand */
+}

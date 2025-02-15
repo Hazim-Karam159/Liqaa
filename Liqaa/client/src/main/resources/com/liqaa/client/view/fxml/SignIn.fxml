@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.liqaa.client.controllers.FXMLcontrollers.SignInController">
+    <SplitPane cache="true" dividerPositions="0.5" focusTraversable="false" pickOnBounds="false" stylesheets="@../styles/hovor.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+   
+            <VBox alignment="CENTER" spacing="20" style="-fx-background-color: #f5f5f5;">
+                <children>
+                    <ImageView fitHeight="215.0" fitWidth="380.0" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/logo.png" />
+                        </image>
+                        <VBox.margin>
+                            <Insets left="10.0" />
+                        </VBox.margin>
+                    </ImageView>
+                </children>
+            </VBox>
+   
+   
+            <VBox alignment="CENTER" spacing="40.0" style="-fx-background-color: #384e6a;">
+                <children>
+   
+                    <HBox alignment="CENTER" focusTraversable="true" maxWidth="170.0" prefHeight="35.0" prefWidth="200.0" stylesheets="@../styles/styles.css">
+                        <children>
+                            <Button fx:id="SignInButton" contentDisplay="CENTER" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #329ba2; -fx-font-size: 15px; -fx-border-width: 1; -fx-background-radius: 15px 0px 0px 15px; -fx-padding: 5 5;" styleClass="hover-effect" text="Sign In" textAlignment="JUSTIFY" textFill="#f2e7e7">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Button>
+                            <Button fx:id="SignUpButton" onAction="#handleSignUpButton" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: white; -fx-text-fill: gray; -fx-font-size: 15px; -fx-background-radius: 0px 15px 15px 0px; -fx-padding: 5 5;" styleClass="hover-effect" text="Sign Up" textAlignment="CENTER">
+                                <HBox.margin>
+                                    <Insets />
+                                </HBox.margin>
+                     </Button>
+                        </children>
+                        <VBox.margin>
+                            <Insets bottom="-10.0" left="-10.0" top="150.0" />
+                        </VBox.margin>
+                    </HBox>
+                    <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="300.0" style="-fx-background-color: White; -fx-background-radius: 15px;">
+                        <children>
+                            <TextField fx:id="PhoneField" promptText="Phone" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
+                            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/phone.png" />
+                                </image>
+                            </ImageView>
+                        </children>
+               </HBox>
+                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="300.0" style="-fx-background-color: white; -fx-background-radius: 15px;" stylesheets="@../styles/styles.css">
+                        <children>
+                            <PasswordField fx:id="PasswordField" prefHeight="26.0" prefWidth="258.0" promptText="Password" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                <HBox.margin>
+                                    <Insets top="2.0" />
+                                </HBox.margin>
+                            </PasswordField>
+                            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/password1.png" />
+                                </image>
+                                <HBox.margin>
+                                    <Insets />
+                                </HBox.margin>
+                            </ImageView>
+                        </children>
+                        <VBox.margin>
+                            <Insets top="-10.0" />
+                        </VBox.margin>
+                    </HBox>
+   
+   
+                    <Button fx:id="LogInButton" maxHeight="50.0" onAction="#handleLogInButton" opacity="0.91" prefWidth="84.0" style="-fx-background-color: #329ba2; -fx-text-fill: white; -fx-font-size: 15px; -fx-padding: 5 5; -fx-font-weight: bold;" stylesheets="@../styles/SignButton.css" text="LogIn">
+                        <opaqueInsets>
+                            <Insets />
+                        </opaqueInsets>
+                        <VBox.margin>
+                            <Insets bottom="150.0" top="-15.0" />
+                        </VBox.margin>
+                  <styleClass>
+                     <String fx:value="redius" />
+                     <String fx:value="hover-effect" />
+                  </styleClass>
+               </Button>
+                </children>
+                <padding>
+                    <Insets left="20.0" />
+                </padding>
+            </VBox>
+        </items>
+    </SplitPane>
+</AnchorPane>

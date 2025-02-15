@@ -1,0 +1,84 @@
+/* Base style for Sign In Button */
+#SignInButton {
+    -fx-background-color: #329ba2;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-border-width: 1;
+    -fx-background-radius: 15px 0px 0px 15px;
+    -fx-cursor: hand;
+}
+
+#SignInButton:hover {
+    -fx-background-color: #3bb4c1; /* Lighter shade for hover */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.5, 0, 1); /* Subtle shadow */
+}
+
+#SignInButton:pressed {
+    -fx-background-color: #2a8a90; /* Darker shade for pressed state */
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.3), 5, 0.5, 0, 1); /* Inner shadow */
+}
+
+/* Base style for Sign Up Button */
+#SignUpButton {
+    -fx-background-color: white;
+    -fx-text-fill: gray;
+    -fx-font-size: 15px;
+    -fx-background-radius: 0px 15px 15px 0px;
+    -fx-cursor: hand;
+}
+
+#SignUpButton:hover {
+    -fx-background-color: #f0f0f0; /* Slightly darker white for hover */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.5, 0, 1); /* Subtle shadow */
+}
+
+#SignUpButton:pressed {
+    -fx-background-color: #e0e0e0; /* Even darker white for pressed state */
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.3), 5, 0.5, 0, 1); /* Inner shadow */
+}
+
+/* Base style for Login Button */
+#loginButton {
+    -fx-background-color: #329ba2;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-background-radius: 15px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 35px;
+    -fx-cursor: hand;
+}
+
+#loginButton:hover {
+    -fx-background-color: #3bb4c1; /* Lighter shade for hover */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.5, 0, 1); /* Subtle shadow */
+}
+
+#loginButton:pressed {
+    -fx-background-color: #2a8a90; /* Darker shade for pressed state */
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.3), 5, 0.5, 0, 1); /* Inner shadow */
+}
+
+/* Base style for Different Account Button */
+#DifferentAccountButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-underline: true;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-padding: 0; /* Remove default padding */
+}
+
+#DifferentAccountButton:hover {
+    -fx-text-fill: #3bb4c1; /* Change text color to a lighter shade (e.g., light blue) */
+    -fx-underline: true; /* Keep underline */
+    -fx-font-weight: bold; /* Optional: Add bold text on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0.5, 0, 1); /* Optional: Add a subtle text shadow */
+}
+
+#DifferentAccountButton:pressed {
+    -fx-text-fill: #2a8a90; /* Darker shade for pressed state */
+    -fx-underline: true; /* Keep underline */
+    -fx-scale-x: 0.98; /* Slightly shrink button */
+    -fx-scale-y: 0.98; /* Slightly shrink button */
+    -fx-opacity: 0.8; /* Reduce opacity for a subtle effect */
+}

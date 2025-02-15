@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400" prefWidth="800" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.liqaa.server.controllers.FXMLcontrollers.LoginController">
+    <SplitPane cache="true" dividerPositions="0.5" focusTraversable="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+
+            <VBox alignment="CENTER" prefHeight="452.0" prefWidth="380.0" spacing="40.0" style="-fx-background-color: #f5f5f5;">
+                <children>
+               <StackPane>
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+                  <children>
+                          <ImageView fitHeight="125.0" fitWidth="246.0" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/logo.png" />
+                        </image>
+                          </ImageView>
+                  </children>
+               </StackPane>
+                </children>
+            </VBox>
+
+            <VBox alignment="CENTER" prefHeight="451.0" prefWidth="466.0" spacing="40.0" style="-fx-background-color: #2c3e50;">
+                <children>
+               <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="300.0" style="-fx-background-color: White; -fx-background-radius: 15px;">
+                  <children>
+                     <TextField fx:id="adminIdTextField" promptText="  Admin Id" style="-fx-background-color: Tranparent;" HBox.hgrow="ALWAYS" />
+                     <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/user.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+                  <VBox.margin>
+                     <Insets right="10.0" />
+                  </VBox.margin></HBox>
+               <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="300.0" style="-fx-background-color: white; -fx-background-radius: 15px;">
+                  <children>
+                     <PasswordField fx:id="passwordTextField" focusTraversable="false" prefHeight="32.0" prefWidth="602.0" promptText="  Password" style="-fx-background-radius: 20 0 0 20; -fx-background-color: Transparent;" />
+                     <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                        <image>
+                           <Image url="@../images/password1.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+                  <VBox.margin>
+                     <Insets right="10.0" top="-10.0" />
+                  </VBox.margin>
+               </HBox>
+
+                    <Button fx:id="AdminLogInButton" maxHeight="50.0" onAction="#handleAdminLogInButton" onMouseClicked="#handleAdminLogInButton" opacity="0.91" prefWidth="84.0" style="-fx-background-color: #329ba2; -fx-text-fill: white; -fx-font-size: 15px; -fx-padding: 5 5; -fx-font-style: bold; -fx-cursor: hand; -fx-background-radius: 50px;" text="LogIn">
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets>
+                  <VBox.margin>
+                     <Insets bottom="150.0" top="-15.0" />
+                  </VBox.margin></Button>
+                </children>
+            <padding>
+               <Insets left="20.0" top="150.0" />
+            </padding>
+            </VBox>
+        </items>
+    </SplitPane>
+</AnchorPane>

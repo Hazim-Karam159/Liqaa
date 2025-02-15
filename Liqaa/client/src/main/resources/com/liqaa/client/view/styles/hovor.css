@@ -1,0 +1,22 @@
+/* General hover effect for interactive elements */
+.hover-effect:hover {
+    -fx-background-color: #e0e0e0;  /* Light gray background */
+    -fx-opacity: 0.8; /* Slight transparency effect */
+    -fx-cursor: hand; /* Change cursor to indicate clickability */
+}
+
+/* If the element doesn't have a background (like Label or ImageView), adjust text color */
+.hover-effect:hover .text {
+    -fx-fill: rgba(0, 0, 0, 0.75); /* Darker text on hover */
+    -fx-font-weight: bold;
+}
+
+.image-view:hover {
+    -fx-opacity: 0.7; /* Makes the image 30% darker */
+}
+
+
+.hover-effect2:hover .text {
+    -fx-font-weight: bold;
+}
+

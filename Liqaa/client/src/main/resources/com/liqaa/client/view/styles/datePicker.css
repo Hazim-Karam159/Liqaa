@@ -1,0 +1,28 @@
+.date-picker .text-field {
+    -fx-background-radius: 50; /* Keep the rounded radius */
+    /*-fx-padding: 5; /* Adjust padding if necessary */
+    -fx-focus-color: transparent; /* Remove focus border */
+}
+
+
+.date-picker .arrow-button {
+    -fx-background-color: transparent; /* Remove default background */
+    -fx-background-position: center;
+    -fx-background-radius: 50; /* Round the dropdown arrow button */
+
+}
+
+/* Pseudo-class for arrow button */
+.date-picker:arrow-button {
+    -fx-background-color: transparent; /* Remove default background */
+    -fx-background-position: center;
+    -fx-background-radius: 50; /* Round the dropdown arrow button */
+}
+
+
+
+.date-picker {
+    -fx-background-radius: 50; /* Set the background's corner radius */
+   /* -fx-padding: 5; /* Optional: Add some padding */
+}
+

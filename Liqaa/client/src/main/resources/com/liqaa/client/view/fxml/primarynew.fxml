@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane onKeyPressed="#handleKeyPressed" prefHeight="768" prefWidth="1200" stylesheets="@../styles/style1.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.liqaa.client.controllers.FXMLcontrollers.PrimaryController">
+
+   <!-- Center: Users Chats and Logo -->
+   <center>
+      <HBox spacing="0" style="-fx-background-color: #f4f4f4;">
+         <Pane minWidth="14.0" prefHeight="768.0" prefWidth="14.0" style="-fx-background-color: f4f4f4;" HBox.hgrow="NEVER" />
+         <!-- Users Chats -->
+         <VBox maxWidth="350" minWidth="350" prefWidth="350" spacing="0" styleClass="contacts-list">
+            <!-- Chats Header -->
+            <Label alignment="BOTTOM_LEFT" prefHeight="57.0" prefWidth="350.0" style="-fx-background-color: #f4f4f4;" styleClass="chats-header" text="     Chats" textFill="#384e6a">
+               <font>
+                  <Font name="Roboto Bold" size="23.0" />
+               </font></Label>
+            <Separator prefHeight="15.0" prefWidth="350.0" style="-fx-background-color: #f4f4f4;" />
+
+            <!-- Search Bar with Icon inside HBox -->
+            <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="304.0" spacing="0" style="-fx-background-color: #e5e5e5; -fx-background-radius: 20; -fx-padding: 5 15 5 15;">
+               <ImageView fitHeight="29.0" fitWidth="30.0" preserveRatio="true" style="-fx-margin: 5 10 5 10;">
+                  <image>
+                     <Image url="@../images/search.png" />
+                  </image>
+               </ImageView>
+               <TextField fx:id="search" prefHeight="27.0" prefWidth="294.0" promptText="Search or start a new chat" style="-fx-background-color: #e5e5e5; -fx-padding: 0 10 0 10; -fx-font-color: #e5e5e5;" styleClass="search-field" />
+            </HBox>
+            <VBox prefHeight="42.0" prefWidth="350.0" style="-fx-background-color: #f4f4f4;">
+               <children>
+                  <fx:include source="components/categoryListView.fxml" />
+               </children>
+            </VBox>
+
+            <!-- Contacts List -->
+            <ListView fx:id="chatListView" style="-fx-background-color: #f4f4f4;" styleClass="contacts-list-view" stylesheets="@../styles/chatListView.css" VBox.vgrow="ALWAYS">
+               <!-- Contacts will be added dynamically here -->
+            </ListView>
+         </VBox>
+         <Pane minWidth="15.0" prefHeight="768.0" prefWidth="15.0" style="-fx-background-color: #f4f4f4;" HBox.hgrow="NEVER" />
+
+         <!-- خط فاصل رمادي رفيع -->
+         <Separator opacity="0.53" orientation="VERTICAL" prefHeight="768.0" prefWidth="0.0" style="-fx-background-color: #D3D3D3; -fx-padding: 0 1 0 0;" />
+
+         <!-- منطقة الشات أو اللوجو -->
+         <StackPane fx:id="rightPane" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+            <!-- اللوجو -->
+            <StackPane fx:id="logoPane" style="-fx-background-color: #f4f4f4; -fx-border-width: 0;" visible="false">
+               <ImageView fitHeight="400" fitWidth="400" opacity="0.6" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/logo.png" />
+                  </image>
+               </ImageView>
+            </StackPane>
+
+            <!-- منطقة الشات -->
+            <VBox fx:id="chatArea" focusTraversable="true" spacing="0" styleClass="chat-area">
+               <BorderPane prefHeight="73.0" prefWidth="746.0" style="-fx-background-color: #f4f4f4;">
+                  <left>
+                     <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                        <children>
+                           <!-- صورة المستخدم واسمه وحالته -->
+                           <ImageView fx:id="chatUserImage" fitHeight="56.0" fitWidth="54.0" layoutX="14.0" layoutY="6.0" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/defaultProfileImage.png" />
+                              </image>
+                           </ImageView>
+                           <Label fx:id="chatUserName" layoutX="73.0" layoutY="20.0" styleClass="chat-user-name" text="User Name" textFill="#000000e5">
+                              <font>
+                                 <Font name="Roboto" size="14.0" />
+                              </font></Label>
+                           <Label fx:id="chatUserStatus" layoutX="73.0" layoutY="37.0" styleClass="chat-user-status" text="Online" textFill="#474747f2">
+                              <font>
+                                 <Font name="Roboto" size="10.0" />
+                              </font></Label>
+                        </children>
+                     </AnchorPane>
+                  </left>
+                  <top>
+                     <Pane prefHeight="4.0" prefWidth="750.0" BorderPane.alignment="CENTER" />
+                  </top>
+                  <right>
+                     <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../styles/hovor.css" BorderPane.alignment="CENTER">
+                        <children>
+                           <ImageView fx:id="voiceCallIcon" fitHeight="45.0" fitWidth="57.0" layoutX="123.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                              <image>
+                                 <Image url="@../images/voiceCall.png" />
+                              </image>
+                           </ImageView>
+         
+                           <!-- الأيقونات في أقصى اليمين -->
+                           <ImageView fx:id="videoCallIcon" fitHeight="50" fitWidth="50" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                              <image>
+                                 <Image url="@../images/videoCall.png" />
+                              </image>
+                           </ImageView>
+                        </children>
+                     </AnchorPane>
+                  </right>
+                  <bottom>
+                     <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+                  </bottom>
+               </BorderPane>
+               <ListView fx:id="chatBox" prefHeight="671.0" prefWidth="746.0" style="-fx-background-color: #f4f4f4;" stylesheets="@../styles/chatListStyle.css" />
+               <Separator prefWidth="200.0" style="-fx-background-color: #f4f4f4;" />
+
+               <!-- Input Area -->
+               <HBox spacing="10" style="-fx-background-color: #f4f4f4;" styleClass="input-area" stylesheets="@../styles/hovor.css">
+                  <!-- Icons on the left -->
+                  <HBox alignment="CENTER_LEFT" spacing="5" stylesheets="@../styles/hovor.css">
+                     <ImageView fx:id="attachFile" fitHeight="54.0" fitWidth="91.0" onMouseClicked="#attachFile" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                        <image>
+                           <Image url="@../images/file.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fx:id="emoji" fitHeight="44.0" fitWidth="52.0" onMouseClicked="#addEmoji" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                        <image>
+                           <Image url="@../images/emoji.png" />
+                        </image>
+                     </ImageView>
+                     <Separator orientation="VERTICAL" prefHeight="11.0" prefWidth="0.0" />
+                  </HBox>
+
+                  <!-- Text Field -->
+                  <TextField fx:id="messageField" focusTraversable="false" prefHeight="52.0" prefWidth="536.0" promptText="Type a message..." style="-fx-padding: 5 5 5 5; -fx-background-color: #f4f4f4;" styleClass="message-field" stylesheets="@../styles/messageInputStyle.css" HBox.hgrow="ALWAYS">
+                     <opaqueInsets>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Roboto" size="15.0" />
+                     </font></TextField>
+
+                  <!-- Send Icon -->
+                  <ImageView fx:id="send" fitHeight="65.0" fitWidth="62.0" onMouseClicked="#handleSendMessage" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                     <image>
+                        <Image url="@../images/send.png" />
+                     </image>
+                  </ImageView>
+               </HBox>
+            </VBox>
+         </StackPane>
+      </HBox>
+   </center>
+   <left>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Pane maxWidth="13.0" minWidth="13.0" prefHeight="768.0" prefWidth="0.0" style="-fx-background-color: #f4f4f4;" />
+            <BorderPane>
+               <center>
+                  <BorderPane maxWidth="68.0" minWidth="68.0" prefHeight="768.0" prefWidth="68.0" style="-fx-background-color: #384E6A; -fx-background-radius: 20 20 20 20;">
+                     <top>
+                        <AnchorPane prefHeight="343.0" prefWidth="70.0" stylesheets="@../styles/hovor.css" BorderPane.alignment="CENTER">
+                           <children>
+                              <Circle fx:id="profileImage" fill="DODGERBLUE" layoutX="34.0" layoutY="43.0" onMouseClicked="#showProfile" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+                              <ImageView fx:id="home_btn" fitHeight="35.0" fitWidth="60.0" layoutX="17.0" layoutY="88.0" onMouseClicked="#home_action" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                                 <image>
+                                    <Image url="@../images/home.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="notification_btn" fitHeight="35.0" fitWidth="60.0" layoutX="17.0" layoutY="156.0" onMouseClicked="#notification_action" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                                 <image>
+                                    <Image url="@../images/active.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="contact_btn" fitHeight="35.0" fitWidth="60.0" layoutX="17.0" layoutY="224.0" onMouseClicked="#contact_action" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                                 <image>
+                                    <Image url="@../images/phone_book.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="chatbot_btn" fitHeight="40.0" fitWidth="65.0" layoutX="14.0" layoutY="292.0" onMouseClicked="#chatbot_action" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                                 <image>
+                                    <Image url="@../images/chatbot.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </top>
+                     <bottom>
+                        <AnchorPane prefHeight="196.0" prefWidth="75.0" stylesheets="@../styles/hovor.css" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fx:id="logout_btn" fitHeight="35.0" fitWidth="60.0" layoutX="17.0" layoutY="148.0" onMouseClicked="#logout_action" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                                 <image>
+                                    <Image url="@../images/logout.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="settings_btn" fitHeight="35.0" fitWidth="60.0" layoutX="17.0" layoutY="93.0" onMouseClicked="#settings_action" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                                 <image>
+                                    <Image url="@../images/settings.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </bottom>
+                  </BorderPane>
+               </center>
+               <top>
+                  <Pane minWidth="15.0" prefHeight="15.0" prefWidth="68.0" style="-fx-background-color: #f4f4f4;" BorderPane.alignment="CENTER" />
+               </top>
+               <bottom>
+                  <Pane minWidth="15.0" prefHeight="15.0" prefWidth="68.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+         </children>
+      </HBox>
+   </left>
+</BorderPane>

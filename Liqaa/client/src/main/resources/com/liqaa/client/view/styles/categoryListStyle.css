@@ -1,0 +1,52 @@
+.list-view {
+    -fx-background-color:  #f4f4f4;
+    -fx-background-insets: 0;
+    -fx-cell-spacing: 8px;
+    -fx-scrollbar-policy: NEVER;
+    -fx-scrollbar: invisible;
+    -fx-scroll-bar: invisible;
+}
+
+.list-view .scroll-bar:horizontal,
+.list-view .scroll-bar:vertical {
+    -fx-opacity: 0;
+    -fx-min-width: 0;
+    -fx-pref-width: 0;
+    -fx-max-width: 0;
+    -fx-min-height: 0;
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
+}
+/*.list-view .list-cell:selected {
+    .8
+}*/
+.list-view .list-cell {
+    -fx-background-color:  #f4f4f4;
+    -fx-text-fill: rgba(0, 0, 0, .8);
+    -fx-font-family: "Roboto";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color:  #e7e7e7;
+    -fx-text-fill: rgba(0, 0, 0, .8);
+    -fx-font-family: "Roboto";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color:  #e7e7e7;
+    -fx-text-fill: rgba(0, 0, 0, .6);
+    -fx-font-family: "Roboto";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.list-view .list-cell:focused {
+    -fx-background-color:  #f4f4f4;
+    -fx-font-family: "Roboto";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}

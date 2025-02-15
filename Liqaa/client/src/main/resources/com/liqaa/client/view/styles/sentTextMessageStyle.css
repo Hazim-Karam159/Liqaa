@@ -1,0 +1,40 @@
+/* HBox container for sent messages */
+.sent-message {
+    -fx-alignment: CENTER_RIGHT;
+    -fx-padding: 5px;
+}
+
+/* Message bubble inside the HBox */
+.sent-bubble {
+    -fx-background-color: #A9D5A0; /* Darker green bubble */
+    -fx-padding: 8px 12px;
+    -fx-background-radius: 12px 12px 2px 12px; /* Rounded corners */
+    -fx-max-width: 300px;
+    -fx-wrap-text: true;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0.5, 1, 2);
+}
+
+/* Message text inside the TextFlow */
+.sent-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333; /* Darker text */
+}
+
+/* AnchorPane for time and seen icon */
+.message-footer {
+    -fx-alignment: BOTTOM_RIGHT;
+    -fx-padding: 2px 4px 0 0;
+}
+
+/* Time label */
+.message-time {
+    -fx-font-size: 10px;
+    -fx-text-fill: #555555; /* Darker gray */
+}
+
+/* Seen icon */
+.seen-icon {
+    -fx-fill: #2A8DCB; /* Darker blue tick color */
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}

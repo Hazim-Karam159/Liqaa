@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="88.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.liqaa.client.controllers.FXMLcontrollers.components.ChatItemController">
+   <children>
+      <ImageView fx:id="image" fitHeight="61.0" fitWidth="57.0" layoutX="20.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/profile.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="name" layoutX="93.0" layoutY="22.0" opacity="0.95" prefHeight="26.0" prefWidth="101.0" text="Hazim Karam">
+         <font>
+            <Font name="Roboto Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="status" layoutX="93.0" layoutY="49.0" opacity="0.82" prefHeight="19.0" prefWidth="74.0" text="Avaliable" textFill="#14c753">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Label>
+      <Separator layoutY="86.0" prefHeight="4.0" prefWidth="350.0" />
+      <Label fx:id="lastMsgTime" layoutX="273.0" layoutY="26.0" text="6:23 AM" textFill="#9297a1" />
+      <Circle fx:id="msgCircle" fill="#4ddf8c" layoutX="307.0" layoutY="61.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Label fx:id="msgCounter" layoutX="303.0" layoutY="52.0" text="3" textFill="WHITE" />
+   </children>
+</AnchorPane>

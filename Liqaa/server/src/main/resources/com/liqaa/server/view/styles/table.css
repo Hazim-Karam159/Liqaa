@@ -1,0 +1,84 @@
+/* Main Table Styling */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-padding: 2px;
+    -fx-table-cell-border-color: transparent;
+}
+
+/* Column Headers */
+.table-view .column-header {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #5f6368;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER-LEFT;
+    -fx-padding: 8px;
+}
+
+/* Table Rows */
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: #f0f0f0;
+    -fx-border-width: 0 0 1px 0;
+    -fx-cell-size: 35px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f8f9fa; 
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #f8f9fa;
+}
+
+/* Table Cells */
+.table-cell {
+    -fx-text-fill: #3c4043;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER-LEFT;
+    -fx-padding: 0 8px;
+}
+
+/* Scrollbar Styling */
+.table-view .scroll-bar:horizontal,
+.table-view .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.table-view .scroll-bar .thumb {
+    -fx-background-color: #dadce0;
+    -fx-background-radius: 4px;
+}
+
+/* No Content Placeholder */
+.table-view .placeholder .label {
+    -fx-text-fill: #80868b;
+    -fx-font-size: 14px;
+    -fx-padding: 20px 0;
+}
+
+/* Status Column Specific Styling */
+.table-column.status-column .table-cell {
+    -fx-font-weight: 500;
+}
+
+.status-busy,
+.status-available,
+.status-away {
+    -fx-text-fill: #d93025;
+}
+
+.status-available {
+    -fx-text-fill: #188038;
+}
+
+.status-away {
+    -fx-text-fill: #f9ab00;
+}

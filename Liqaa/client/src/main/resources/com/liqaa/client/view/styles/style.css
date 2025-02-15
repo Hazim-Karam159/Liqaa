@@ -1,0 +1,31 @@
+/* Removes table row background */
+.table-row-cell {
+    -fx-background-color: transparent;
+}
+
+/* Styling for column headers */
+.table-view .column-header .label {
+    -fx-font-size: 18px;
+    -fx-font-family: 'Montserrat';
+    -fx-font-weight: bold; /* Corrected */
+    -fx-alignment: center;
+    -fx-text-fill: white;
+    -fx-background-color: #384E6A;
+}
+
+/* Removes column and cell borders */
+.table-view {
+    -fx-column-border-visible: false;  /* Hide vertical column borders */
+    -fx-table-cell-border-color: transparent;  /* Hide cell borders */
+    -fx-border-color: transparent; /* Optional: Hide outer border */
+}
+
+/* To hide the vertical lines that exist among the table columns */
+.no-border .table-row-cell {
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 1 0; /* Only show horizontal lines (bottom border) */
+}
+
+.no-border .table-row-cell .table-cell {
+    -fx-border-color: transparent; /* Remove cell borders */
+}

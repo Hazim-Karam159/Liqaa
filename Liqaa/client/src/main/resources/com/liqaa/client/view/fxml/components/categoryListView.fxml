@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.liqaa.client.controllers.FXMLcontrollers.components.CategoryListController">
+
+    <ListView fx:id="categoryListView"
+              orientation="HORIZONTAL"
+              prefHeight="26.0"
+              prefWidth="457.0"
+              style="-fx-border-width: 0; -fx-border-color: transparent;"
+              stylesheets="@../../styles/categoryListStyle.css"/>
+</VBox>

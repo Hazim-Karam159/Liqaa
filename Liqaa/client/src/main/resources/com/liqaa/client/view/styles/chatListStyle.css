@@ -1,0 +1,57 @@
+.list-view .list-cell .text-flow {
+    -fx-padding: 0 0 20 0; /* Add padding to the top of the TextFlow */
+    }
+    .text-flow {
+        -fx-text-alignment: center;
+        -fx-line-spacing: 1.2em;
+    }
+
+.list-view {
+    -fx-scroll-to-top: true;
+    -fx-cell-selection-enabled: false;
+    -fx-background-color:  #f4f4f4;
+    -fx-background-insets: 0;
+    -fx-padding: 10 10 10 10;
+    -fx-scroll-top: 1000000; /* scroll to bottom initially */
+    -fx-cell-spacing: 5px; /* gap between items */
+}
+
+.list-view .scroll-bar:vertical {
+    -fx-opacity: 0;
+    -fx-min-width: 0;
+    -fx-pref-width: 0;
+    -fx-max-width: 0;
+}
+
+.list-view .list-cell {
+    -fx-background-color:  #f4f4f4;
+    -fx-background-insets: 0;
+    -fx-padding: 10 10 10 10;
+    -fx-text-fill: rgba(0, 0, 0, .8);
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: center-left;
+}
+
+.list-view .list-cell:empty {
+    -fx-opacity: 0;
+}
+
+.list-view {
+    -fx-selection-bar: transparent; /* Hide selection highlight */
+    -fx-selection-bar-non-focused: transparent;
+}
+
+.list-cell {
+    -fx-background-color: transparent; /* Remove cell background */
+    -fx-cursor: default; /* Disable pointer cursor */
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: transparent;
+}

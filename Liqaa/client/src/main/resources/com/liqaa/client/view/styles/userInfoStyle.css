@@ -1,0 +1,18 @@
+.root {
+    -fx-font-family: 'Arial';
+    -fx-base: #384E6A;
+    -fx-background: #f4f4f4;
+}
+
+.button{
+	-fx-background-color: #384E6A;
+	-fx-background-radius: 20px;
+	-fx-cursor: hand;
+	-fx-padding: 8px 16px;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: rgba(56, 78, 106, 0.9);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 0, 2);
+}

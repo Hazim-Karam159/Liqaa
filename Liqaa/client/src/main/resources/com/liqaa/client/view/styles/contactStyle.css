@@ -1,0 +1,496 @@
+/* تنسيقات عامة */
+.root {
+    -fx-font-family: 'Arial';
+    -fx-base: #384E6A;
+    -fx-background: linear-gradient(to bottom, #f4f4f4, #e0e0e0);
+}
+/* تنسيقات الـ ListView والـ CheckBox */
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #384E6A;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #384E6A;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: rgba(56, 78, 106, 0.1);
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: rgba(56, 78, 106, 0.2);
+}
+
+.list-cell .hbox {
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+}
+
+.list-cell .image-view {
+    -fx-fit-height: 25px;
+    -fx-fit-width: 25px;
+}
+
+.list-cell .text {
+    -fx-fill: #384E6A;
+    -fx-font-size: 14px;
+}
+
+.check-box {
+    -fx-text-fill: #384E6A;
+    -fx-font-size: 14px;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #384E6A;
+    -fx-border-color: #384E6A;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: rgba(56, 78, 106, 0.1);
+    -fx-cursor: hand;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: rgba(56, 78, 106, 0.2);
+    -fx-text-fill: #384E6A;
+}
+
+.list-cell:filled:selected:focused {
+    -fx-border-color: transparent;
+}
+
+.list-cell .hbox {
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+}
+
+.list-cell .image-view {
+    -fx-fit-height: 25px;
+    -fx-fit-width: 25px;
+}
+
+.list-cell .circle {
+    -fx-fill: #EC2323;
+}
+
+.list-cell .circle.available {
+    -fx-fill: #33EC23;
+}
+
+.list-cell .text {
+    -fx-fill: #384E6A;
+    -fx-font-size: 14px;
+}
+
+.list-cell .action-icon {
+    -fx-fit-height: 20px;
+    -fx-fit-width: 20px;
+    -fx-cursor: hand;
+}
+
+.list-cell .action-icon:hover {
+    -fx-opacity: 0.8;
+}
+
+/* تنسيقات الأزرار مع تدرجات ألوان وأنيمشنات */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #384E6A, #2a3a4f);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+    -fx-transition: all 0.3s ease;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #2a3a4f, #384E6A);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 0, 2);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.button:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 0, 3);
+}
+
+.button#removeCategoryBtn {
+    -fx-background-color: linear-gradient(to bottom, #ff4444, #cc3636);
+}
+
+.button#removeCategoryBtn:hover {
+    -fx-background-color: linear-gradient(to bottom, #cc3636, #ff4444);
+}
+
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #384E6A;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px; /* رجوع للشكل المدور */
+    -fx-padding: 5px 10px;
+    -fx-font-size: 14px;
+    -fx-transition: all 0.3s ease;
+}
+
+.text-field:focused {
+    -fx-background-color: transparent; /* إزالة الباك جراوند الأبيض */
+    -fx-border-color: #2a3a4f; /* لون البوردر عند الفوكس */
+}
+
+
+.hbox {
+    -fx-background-color: rgba(56, 78, 106, 0.34);
+    -fx-background-radius: 20px;
+    -fx-padding: 5px;
+}
+
+
+.vbox {
+    -fx-background-color: linear-gradient(to bottom, #384E6A, #2a3a4f);
+}
+
+
+.image-view#logo {
+    -fx-fit-height: 60px;
+    -fx-fit-width: 112px;
+}
+
+.text#title {
+    -fx-fill: #384E6A;
+    -fx-font-size: 48px;
+    -fx-font-family: 'Arial Bold';
+}
+
+.line {
+    -fx-stroke: #cdcdcd;
+}
+
+
+.header-hbox {
+    -fx-background-color: linear-gradient(to bottom, #384E6A, #2a3a4f);
+    -fx-padding: 15px;
+    -fx-spacing: 20px;
+    -fx-alignment: center-left;
+    -fx-border-color: #cdcdcd;
+    -fx-border-width: 0 0 1px 0;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+}
+
+.header-text {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-fill: white;
+    -fx-padding: 0 20px;
+}
+
+
+
+
+
+
+.dialog-pane {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #384E6A;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+    -fx-padding: 20px;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: linear-gradient(to bottom, #384E6A, #2a3a4f);
+    -fx-border-radius: 15px 15px 0 0;
+    -fx-background-radius: 15px 15px 0 0;
+    -fx-padding: 15px;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.dialog-pane .content {
+    -fx-padding: 20px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #384E6A;
+    -fx-background-color: #f9f9f9;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #384E6A;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #384E6A;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: rgba(56, 78, 106, 0.1);
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: rgba(56, 78, 106, 0.2);
+}
+
+.list-cell .hbox {
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+}
+
+.list-cell .image-view {
+    -fx-fit-height: 25px;
+    -fx-fit-width: 25px;
+}
+
+.list-cell .text {
+    -fx-fill: #384E6A;
+    -fx-font-size: 14px;
+}
+
+.check-box {
+    -fx-text-fill: #384E6A;
+    -fx-font-size: 14px;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #384E6A;
+    -fx-border-color: #384E6A;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+
+.dialog-pane .button {
+    -fx-background-color: linear-gradient(to bottom, #384E6A, #2a3a4f);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: linear-gradient(to bottom, #2a3a4f, #384E6A);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.dialog-pane .button:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 0, 3);
+}
+
+.dialog-pane .button:cancel {
+    -fx-background-color: linear-gradient(to bottom, #ff4444, #cc3636);
+    -fx-text-fill: white;
+}
+
+.dialog-pane .button:cancel:hover {
+    -fx-background-color: linear-gradient(to bottom, #cc3636, #ff4444);
+}
+
+
+.dialog-pane .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #384E6A;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.dialog-pane .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #384E6A;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+}
+
+.dialog-pane .list-cell:filled:hover {
+    -fx-background-color: rgba(56, 78, 106, 0.1);
+}
+
+.dialog-pane .list-cell:filled:selected {
+    -fx-background-color: rgba(56, 78, 106, 0.2);
+}
+
+.dialog-pane .list-cell .hbox {
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+}
+
+.dialog-pane .list-cell .image-view {
+    -fx-fit-height: 25px;
+    -fx-fit-width: 25px;
+}
+
+.dialog-pane .list-cell .text {
+    -fx-fill: #384E6A;
+    -fx-font-size: 14px;
+}
+
+.search-field {
+    -fx-background-color: transparent; /* خلفية شفافة */
+    -fx-border-color: transparent; /* إزالة الحدود */
+    -fx-border-width: 0; /* إزالة عرض الحدود */
+    -fx-background-radius: 20px; /* زوايا دائرية */
+    -fx-padding: 8px 12px 8px 35px; /* Padding مع ترك مساحة للأيقونة */
+    -fx-font-size: 14px;
+    -fx-text-fill: #384E6A; /* لون النص */
+    -fx-prompt-text-fill: #384E6A; /* لون النص التلميحي */
+    -fx-transition: all 0.3s ease; /* تأثير انتقالي */
+}
+
+.search-field:focused {
+    -fx-border-color: transparent; /* إزالة الحدود عند التركيز */
+    -fx-effect: none; /* إزالة التأثيرات عند التركيز */
+}
+.search-field .ikonli-font-icon {
+    -fx-icon-color: #384E6A;
+    -fx-icon-size: 20px;
+    -fx-translate-x: -25px;
+}
+
+.label {
+    -fx-text-fill: #384E6A;
+    -fx-font-size: 14px;
+}
+
+
+.search-field:focused {
+    -fx-border-color: #2a3a4f;
+    -fx-effect: dropshadow(gaussian, rgba(56, 78, 106, 0.3), 10, 0, 0, 0);
+}
+
+.search-field .ikonli-font-icon {
+    -fx-icon-color: #384E6A;
+    -fx-icon-size: 20px;
+    -fx-translate-x: -25px;
+}
+
+.label {
+    -fx-text-fill: #384E6A;
+    -fx-font-size: 14px;
+}
+
+.rounded-image {
+    -fx-border-radius: 50%; /* حواف دائرية */
+    -fx-background-radius: 50%; /* حواف دائرية للخلفية */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0); /* ظل خفيف */
+}
+
+/* استهداف الجزء الرئيسي من الـ ComboBox */
+.dialog-pane .combo-box {
+    -fx-background-color: #FFFFFF; /* لون خلفية أبيض */
+    -fx-text-fill: #34495E; /* لون النص داكن */
+    -fx-font-size: 14px; /* حجم الخط */
+    -fx-font-family: "Segoe UI", sans-serif; /* نوع الخط */
+    -fx-background-radius: 8; /* زوايا مدورة */
+    -fx-border-color: #BDC3C7; /* لون حدود فاتح */
+    -fx-border-radius: 8; /* زوايا مدورة للحدود */
+    -fx-border-width: 1.5px; /* سمك الحدود */
+    -fx-padding: 8px; /* مسافات داخلية */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 0, 2, 4, 0); /* ظل خفيف */
+    -fx-cursor: hand; /* تغيير شكل المؤشر إلى يد */
+}
+
+/* استهداف النص اللي بيتكتب (Prompt Text) */
+.dialog-pane .combo-box .text-input {
+    -fx-prompt-text-fill: #95A5A6; /* لون النص اللي بيتكتب (Prompt Text) */
+}
+
+/* استهداف الـ ComboBox عند التركيز (Focus) */
+.dialog-pane .combo-box:focused {
+    -fx-border-color: #3498DB; /* لون حدود أزرق */
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.3), 0, 4, 8, 0); /* ظل أزرق */
+}
+
+/* استهداف السهم (Arrow) */
+.dialog-pane .combo-box .arrow-button {
+    -fx-background-color: transparent; /* خلفية شفافة */
+    -fx-background-radius: 0 8 8 0; /* زوايا مدورة فقط على اليمين */
+}
+
+.dialog-pane .combo-box .arrow {
+    -fx-background-color: #3498DB; /* لون السهم أزرق */
+    -fx-shape: "M 0 0 L 5 5 L 10 0 Z"; /* تغيير شكل السهم لمثلث */
+}
+
+/* استهداف القائمة (Dropdown) */
+.dialog-pane .combo-box .list-view {
+    -fx-background-color: #FFFFFF; /* لون خلفية القائمة */
+    -fx-border-color: #BDC3C7; /* لون حدود القائمة */
+    -fx-border-radius: 8; /* زوايا مدورة للقائمة */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 0, 4, 8, 0); /* ظل للقائمة */
+    -fx-padding: 5px; /* مسافات داخلية */
+}
+
+/* استهداف العناصر داخل القائمة */
+.dialog-pane .combo-box .list-cell {
+    -fx-background-color: #FFFFFF; /* لون خلفية العنصر */
+    -fx-text-fill: #34495E; /* لون النص */
+    -fx-font-size: 13px; /* حجم الخط */
+    -fx-padding: 10px; /* مسافات داخلية للعنصر */
+    -fx-border-color: transparent; /* إزالة الحدود */
+}
+
+/* استهداف العنصر عند المرور عليه بالماوس (Hover) */
+.dialog-pane .combo-box .list-cell:hover {
+    -fx-background-color: #F0F3F4; /* لون خلفية فاتح */
+    -fx-text-fill: #3498DB; /* لون نص أزرق */
+}
+
+/* استهداف العنصر المحدد (عندما يتم اختياره) */
+.dialog-pane .combo-box .list-cell:selected {
+    -fx-background-color: #3498DB; /* لون خلفية أزرق */
+    -fx-text-fill: white; /* لون النص أبيض */
+}
+
+.container {
+    -fx-pref-width: 800px;
+    -fx-max-width: 1000px;
+}
+
+.title-box {
+    -fx-pref-width: 800px;
+    -fx-max-width: 1000px;
+}
+
+.title-text {
+    -fx-max-width: 150px; /* يمكن تعديل القيمة حسب الحاجة */
+}

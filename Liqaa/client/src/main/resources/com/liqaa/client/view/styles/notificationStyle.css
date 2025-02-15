@@ -1,0 +1,48 @@
+.root {
+    -fx-font-family: 'Arial';
+    -fx-base: #384E6A;
+    -fx-background: #f4f4f4;
+}
+/* تنسيق عام للـ container */
+#tabs {
+    -fx-background-color: #384E6A;
+    -fx-background-radius: 15;
+    -fx-padding: 10 50 10 50; /* مسافة من اليمين والشمال */
+    -fx-alignment: center; /* علشان الأزرار تبقى في النص */
+    -fx-spacing: 20; /* زيادة المسافة بين الأزرار */
+    -fx-pref-height: 60px; /* ارتفاع ثابت لا يتغير */
+}
+
+/* تنسيق الأزرار */
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 8 16;
+    -fx-background-radius: 10;
+    -fx-background-color: #384E6A;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: #3498DB;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 0, 2);
+}
+
+/* تنسيق الـ MenuButton */
+.menu-button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 8 16;
+    -fx-background-radius: 10;
+    -fx-background-color: #384E6A;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+}
+
+.menu-button:hover {
+    -fx-background-color: #3498DB;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 0, 2);
+}

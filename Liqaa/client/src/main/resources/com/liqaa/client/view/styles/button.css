@@ -1,0 +1,6 @@
+/* button-style.css */
+
+.button {
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+}

@@ -1,0 +1,8 @@
+/* Hide vertical and horizontal scrollbars */
+.list-view .scroll-bar,
+.tree-view .scroll-bar,
+.table-view .scroll-bar {
+    -fx-opacity: 0;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+}

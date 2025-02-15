@@ -1,0 +1,14 @@
+.text-flow {
+    -fx-background-color: #c9c9c9;
+    -fx-background-radius: 30 0 0 30;
+    -fx-padding: 8px 12px;  /* Top/Bottom padding for vertical spacing */
+    -fx-font-size: 14px;
+    -fx-text-fill: #2e2e2e;
+    -fx-wrap-text: true;
+}
+
+/* Add this to target the Text node specifically */
+.text-flow .text {
+    -fx-fill: #2e2e2e;  /* Ensures text color is applied */
+    -fx-font-family: "Roboto";
+}

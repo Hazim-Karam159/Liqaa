@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="940.0" stylesheets="@../styles/notificationStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.liqaa.client.controllers.FXMLcontrollers.NotificationsController">
+    <left>
+        <BorderPane BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets top="-151.0" />
+            </BorderPane.margin>
+            <center>
+                <BorderPane maxWidth="68.0" minHeight="68.0" prefHeight="768.0" prefWidth="68.0" style="-fx-background-color: #384E6A; -fx-background-radius: 20 20 20 20;">
+                    <bottom>
+                        <AnchorPane prefHeight="168.0" prefWidth="58.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <ImageView fx:id="settings_btn" fitHeight="35.0" fitWidth="60.0" layoutX="17.0" layoutY="66.0" onMouseClicked="#settings_action" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                                    <image>
+                                        <Image url="@../images/settings.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="logout_btn" fitHeight="35.0" fitWidth="60.0" layoutX="17.0" layoutY="121.0" onMouseClicked="#logout_action" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                                    <image>
+                                        <Image url="@../images/logout.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                    </bottom>
+                    <center>
+                        <AnchorPane prefHeight="286.0" prefWidth="58.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <ImageView fx:id="contact_btn" fitHeight="35.0" fitWidth="60.0" layoutX="17.0" layoutY="224.0" onMouseClicked="#contact_action" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                                    <image>
+                                        <Image url="@../images/phone_book.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="home_btn" fitHeight="35.0" fitWidth="60.0" layoutX="17.0" layoutY="88.0" onMouseClicked="#home_action" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                                    <image>
+                                        <Image url="@../images/home.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="notification_btn" fitHeight="35.0" fitWidth="60.0" layoutX="17.0" layoutY="156.0" onMouseClicked="#notification_action" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                                    <image>
+                                        <Image url="@../images/active.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="chatbot_btn" fitHeight="40.0" fitWidth="65.0" layoutX="14.0" layoutY="292.0" onMouseClicked="#chatbot_action" pickOnBounds="true" preserveRatio="true" styleClass="hover-effect">
+                                    <image>
+                                        <Image url="@../images/chatbot.png" />
+                                    </image>
+                                </ImageView>
+                                <Circle fx:id="profilePhoto" fill="DODGERBLUE" layoutX="34.0" layoutY="43.0" onMouseClicked="#profile_action" radius="23.0" stroke="BLACK" strokeType="INSIDE" styleClass="hover-effect" />
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </center>
+            <left>
+                <Pane maxWidth="13.0" minWidth="13.0" prefHeight="656.0" prefWidth="22.0" BorderPane.alignment="CENTER" />
+            </left>
+            <top>
+                <Pane maxHeight="15.0" minHeight="15.0" prefHeight="26.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+            </top>
+            <bottom>
+                <Pane maxHeight="15.0" minHeight="15.0" prefHeight="36.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+            </bottom>
+        </BorderPane>
+    </left>
+    <top>
+        <AnchorPane prefHeight="154.0" prefWidth="838.0">
+            <children>
+                <Text fill="#384e6a" layoutX="100.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications">
+                    <font>
+                        <Font name="Arial Bold" size="48.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="60.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="40.0">
+                    <image>
+                        <Image url="@../images/logo.png" />
+                    </image>
+                </ImageView>
+                <Line endX="850.0" endY="120.0" startX="100.0" startY="120.0" stroke="#cdcdcd" />
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <GridPane prefHeight="501.0" prefWidth="797.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="163.59998168945313" minHeight="10.0" prefHeight="54.79998779296875" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="163.59998168945313" minHeight="10.0" prefHeight="45.600006103515625" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="439.00001220703126" minHeight="0.0" prefHeight="423.99999389648445" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <HBox fx:id="tabs" prefWidth="800.0" prefHeight="50.0" maxWidth="800.0" maxHeight="50.0" spacing="20.0" style="-fx-background-color: #384E6A; -fx-background-radius: 15;" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets top="20.0" />
+                    </GridPane.margin>
+                    <padding>
+                        <Insets left="10.0" right="10.0" />
+                    </padding>
+                    <children>
+                        <Button fx:id="allBtn" mnemonicParsing="false" onAction="#allAction" onMouseEntered="#allMouseEntered" onMouseExited="#allMouseExited" prefHeight="41.0" prefWidth="100.0" style="-fx-background-color: #384E6A;" text="All" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets top="2.5" />
+                            </HBox.margin>
+                        </Button>
+                        <MenuButton fx:id="invitStatusBtn" mnemonicParsing="false" onMouseEntered="#statusMouseEntered" onMouseExited="#statusMouseExited" prefHeight="31.0" prefWidth="190.0" style="-fx-background-color: #384E6A;" text="Invitations Status" textFill="WHITE">
+                            <items>
+                                <MenuItem fx:id="accepted" mnemonicParsing="false" onAction="#acceptedAction" text="Accepted" />
+                                <MenuItem fx:id="rejected" mnemonicParsing="false" onAction="#declinedAction" text="Declined" />
+                            </items>
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets bottom="1.0" top="2.5" />
+                            </HBox.margin>
+                        </MenuButton>
+                        <Button fx:id="reqBtn" mnemonicParsing="false" onAction="#reqAction" onMouseEntered="#reqMouseEntered" onMouseExited="#reqMouseExited" prefHeight="41.0" style="-fx-background-color: #384E6A;" text="Upcoming Requests" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets bottom="1.0" top="2.5" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="annBtn" mnemonicParsing="false" onAction="#annAction" onMouseEntered="#annMouseEntered" onMouseExited="#annMouseExited" prefHeight="41.0" style="-fx-background-color: #384E6A;" text="Announcements" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets top="2.5" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+                <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="378.0" prefWidth="802.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="50.0" />
+                    </GridPane.margin>
+                    <content>
+                        <VBox fx:id="notificationsContainer" prefHeight="339.0" prefWidth="795.0" spacing="10.0" />
+                    </content>
+                </ScrollPane>
+                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="40.0" right="38.0" top="-30.0" />
+            </BorderPane.margin>
+        </GridPane>
+    </center>
+</BorderPane>
