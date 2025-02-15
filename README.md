@@ -113,7 +113,7 @@ java -jar client/target/client-1.0-SNAPSHOT.jar
 ## Development Team
 - Ibrahim Diab (Project lead)
 - Mohamed Karam
-- Alaa hathout
+- Alaa Hathout
 - Salma Abdelnaser
 
 ## License
